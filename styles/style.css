@@ -27,6 +27,20 @@
 	float:right;
 }
 
+.navbtn{
+	color: rgb(120,120,120);
+	font-size: 16px;
+	transition:.3s;
+}
+
+.navbtn:hover{
+	color:black;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	transition:.3s;
+}
+
 .intext{
 	min-width: 250px;
 	height:32px;
@@ -36,4 +50,29 @@
 	border-width: 1px;
 	border-color: rgb(200,200,200);
 	padding-left: 4px;
+}
+
+.btn{
+	min-width: 100px;
+	height:32px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-top:8px;
+	color:white;
+	background-color:rgb(200,200,200);
+	border:none;
+	outline:none;
+	transition:.3s;
+}
+
+.btn:hover{
+	background-color:rgb(120,120,120);
+	transition:.3s;
+}
+
+.content{
+	width:100%;
+	padding-top:16px;
+	padding-bottom:16px;
 }
