@@ -9,6 +9,7 @@
 
 	<body>
 		<?php include("modules/registerform.php"); ?>
+		<?php include("modules/loginform.php"); ?>
 		<?php include("modules/navbar.php"); ?>
 		<div class="content">
 		</div>

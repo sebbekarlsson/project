@@ -10,7 +10,7 @@
 	<div class="navright">
 		<ul>
 			<li><a class="navbtn app_pop" id="registerform">Sign up</a></li>
-			<li><a class="navbtn" href="#">Login</a></li>
+			<li><a class="navbtn app_pop" id="loginform">Login</a></li>
 			<li>
 				<input class="intext" type="text" name="q" placeholder="search...">
 				<input class="btn" type="submit" value="Search">
