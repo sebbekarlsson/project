@@ -1,3 +1,4 @@
+<?php include("modules/database.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>

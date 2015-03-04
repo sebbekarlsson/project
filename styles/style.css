@@ -81,6 +81,16 @@
 	transition:.3s;
 }
 
+.select{
+	min-width: 250px;
+	height:32px;
+	background-color:rgb(200,200,200);
+	border:none;
+	border-radius: none;
+	outline:none;
+	color:black;
+}
+
 .content{
 	width:100%;
 	padding-top:16px;
