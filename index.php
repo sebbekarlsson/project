@@ -1,4 +1,4 @@
-<?php include("modules/database.php"); ?>
+<?php include("modules/API.php");?>
 <!DOCTYPE html>
 <html>
 	<head>

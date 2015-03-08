@@ -1,6 +1,6 @@
 <?php
 
-	include("../modules/database.php");
+	include("../modules/API.php");
 
 	$email = $_POST['reg_email'];
 	$firstname = $_POST['reg_firstname'];
