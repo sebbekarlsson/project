@@ -25,6 +25,7 @@
 		var $userBirthyear;
 		var $userBio;
 		var $userPicture;
+		var $userProfession;
 
 		function __construct($userID){
 			$this->userID = $userID;
@@ -38,6 +39,7 @@
 				$this->userBirthyear = $data['userBirthyear'];
 				$this->userBio = $data['userBio'];
 				$this->userPicture = $data['userPicture'];
+				$this->userProfession = $data['userProfession'];
 			}
 		}
 	}

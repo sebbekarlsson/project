@@ -16,7 +16,7 @@
 				}else{
 					echo
 					"
-					<li><a class='navbtn' href='profile.php?doc=about.php'>".$USER->userFirstname."</a></li>
+					<li><a class='navbtn' href='profile.php?userID=$USER->userID&doc=about.php'>".$USER->userFirstname."</a></li>
 					<li><a class='navbtn' href='logout.php' title='warning, brain damage'>Logout</a></li>
 					";
 				}

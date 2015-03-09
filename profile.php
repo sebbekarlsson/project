@@ -1,4 +1,10 @@
 <?php include("modules/API.php");?>
+<?php
+
+	$ID = $_GET['userID'];
+	$profileUser = new User($ID);
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,12 +19,15 @@
 		<?php include("modules/loginform.php"); ?>
 		<?php include("modules/navbar.php"); ?>
 		<div class="content">
-			<div class="page shadowed">
+			<div class="page">
 				<div class="pagemenu">
-					<a class="menubtn" href="profile.php?doc=about.php"><span>About</span></a>
-					<a class="menubtn" href="profile.php?doc=projects.php"><span>Projects</span></a>
-					<a class="menubtn" href="profile.php?doc=friends.php"><span>Friends</span></a>
-					<a class="menubtn" href="profile.php?doc=settings.php"><span>Settings</span></a>
+					<a class="menubtn" href="profile.php?userID=<?php echo $ID; ?>&doc=about.php"><span>About</span></a>
+					<a class="menubtn" href="profile.php?userID=<?php echo $ID; ?>&doc=projects.php"><span>Projects</span></a>
+					<a class="menubtn" href="profile.php?userID=<?php echo $ID; ?>&doc=friends.php"><span>Friends</span></a>
+					<?php
+						if($profileUser->userID == $USER->userID)
+						echo '<a class="menubtn" href="profile.php?userID='.$ID.'&doc=settings.php"><span>Settings</span></a>';
+					?>
 				</div>
 				<div class="pageright">
 					<?php

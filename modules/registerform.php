@@ -1,6 +1,6 @@
 <div class="backdrop" id="registerform">
 	<div class="app">
-		<div class="text">
+		<div class="text margin">
 			<h2>Register</h2><br>
 			<input class="intext" type="text" id="reg_email" placeholder="email"><br>
 			<input class="intext" type="text" id="reg_firstname" placeholder="firstname"><br>
