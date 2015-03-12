@@ -19,14 +19,30 @@
 		<h3>Bio</h3>
 		<textarea rows="8" cols="64" name="new_bio"><?php echo $profileUser->userBio; ?></textarea><br>
 		<h3>Profession</h3>
-		<input class="intext" type="text" name="new_profession" placeholder="What's your profession?" value='<?php echo $profileUser->userProfession; ?>'><br>
+		<select name="new_professionID" class="select">
+			<?php
+
+				$result = mysql_query("SELECT * FROM professions");
+				while(($data = mysql_fetch_array($result))){
+					$pname = $data['professionName'];
+					$pid = $data['professionID'];
+
+					if($pid == $profileUser->userProfessionID){
+						echo "<option value='$pid' selected>$pname</option>";
+					}else{
+						echo "<option value='$pid'>$pname</option>";
+					}
+				}
+
+			?>
+		</select><br>
 		<br><input type="submit" class="btn green" name="new_save" value="Save">
 	</form>
 	<?php
 		if(isset($_POST['new_save'])){
 			$userID = $USER->userID;
 			$bio = $_POST['new_bio'];
-			$profession = $_POST['new_profession'];
+			$professionID = $_POST['new_professionID'];
 			if(substr_count($bio, ">") > 0){
 				echo "<p>Bio contains bad chars!</p>";
 				return;
@@ -34,9 +50,10 @@
 				echo "<p>Profession contains bad chars!</p>";
 			}
 			else{
-				$sql = "UPDATE USERS SET userBio='$bio', userProfession='$profession' WHERE userID=$userID";
+				$sql = "UPDATE USERS SET userBio='$bio', userProfessionID=$professionID WHERE userID=$userID";
 				mysql_query($sql);
 				echo "<p>Information updated!</p>";
+				echo "<script>window.location.href=window.location.href;</script>";
 			}
 		}
 

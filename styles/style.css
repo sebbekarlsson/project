@@ -53,6 +53,28 @@
 	padding-left: 4px;
 }
 
+.select{
+	width: 100px;
+	height:32px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-top:8px;
+	color:white;
+	background-color:rgb(200,200,200);
+	border:none;
+	outline:none;
+	text-decoration: none;
+	transition:.3s;
+}
+
+.struct{
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:12px;
+}
+
 .btn{
 	min-width: 100px;
 	height:32px;
@@ -76,7 +98,7 @@
 	background-color:#e74c3c;
 }
 
-.btn:hover{
+.btn:hover, .select:hover{
 	background-color:rgb(120,120,120);
 	transition:.3s;
 }

@@ -25,7 +25,7 @@
 		var $userBirthyear;
 		var $userBio;
 		var $userPicture;
-		var $userProfession;
+		var $userProfessionID;
 
 		function __construct($userID){
 			$this->userID = $userID;
@@ -39,8 +39,16 @@
 				$this->userBirthyear = $data['userBirthyear'];
 				$this->userBio = $data['userBio'];
 				$this->userPicture = $data['userPicture'];
-				$this->userProfession = $data['userProfession'];
+				$this->userProfessionID = $data['userProfessionID'];
 			}
+		}
+	}
+
+	function getProfessionName($id){
+		$sql = "SELECT professionName FROM professions WHERE professionID=$id";
+		$result = mysql_query($sql);
+		while(($data = mysql_fetch_array($result))){
+			return $data['professionName'];
 		}
 	}
 

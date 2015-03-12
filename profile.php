@@ -43,6 +43,6 @@
 	</body>
 
 	<footer>
-		<?php include("modules/close.php"); ?>
+		<?php include("modules/footer.php"); ?>
 	</footer>
 </html>

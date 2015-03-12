@@ -17,5 +17,6 @@
 	</body>
 
 	<footer>
+		<?php include("modules/footer.php"); ?>
 	</footer>
 </html>

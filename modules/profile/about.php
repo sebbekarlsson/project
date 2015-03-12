@@ -14,7 +14,7 @@
 			echo "<h2>Profession</h2>";
 			echo "<div class='text nomargin'>";
 				echo "<p>";
-					echo $profileUser->userProfession;
+					echo getProfessionName($profileUser->userProfessionID);
 				echo "</p>";
 			echo "</div>";
 
